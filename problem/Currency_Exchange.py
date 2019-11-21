@@ -20,6 +20,7 @@ def forex(start_money, trade_count):
             buy(wallet, types, [i for i in buy_sell_rate if i[0] == types][0][1], int(money))
         else:
             sell(wallet, types, [i for i in buy_sell_rate if i[0] == types][0][1], int(money))
+
     for i in sorted([[i, wallet[i]] for i in wallet if wallet[i] >= 1], key=lambda x: tuple(x[0])):
         print("%s %.2f"%(i[0], i[1]))
  
